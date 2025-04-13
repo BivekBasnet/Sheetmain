@@ -1,0 +1,96 @@
+<div class="out">
+  <div style="font-size: 10px;font-weight: bold;">
+    IEMIS CODE: 040110004
+  </div>
+  <div class="logo">
+    <img src="image.jpeg">
+    <div class="name">
+      <div style="font-size: 20px;">{{school.name}}</div>
+      <div style="font-size: 16px;">{{school.location}}</div>
+      <div style="font-size: 16px;">ESTD: {{school.estd}} B.S.</div>
+      <div style="font-size: 14px;">Phone:{{school.phone}}</div>
+    </div>
+  </div>
+  <div class="content" style="font-size: 20px;">
+    GRADE-SHEET
+  </div>
+  <div style="font-size: 12px;">
+    THE GRADE(S) SECURED BY <b>{{student.name}}</b> DATE OF BIRTH <b>{{student.dob}}</b> IEMIS REGD. NO.<b>{{student.regn}}</b>  SYMBOL NO <b>{{student.symboln}}</b> GRADE: <b>{{student.grade}}</b> SECTION: <b>{{student.section}}</b> IN THE <b>ANNUAL EXAMINATION</b> CONDUCTED BY SCHOOL IN <b>2080 B.S. (2024 A.D.)</b> ARE GIVEN BELOW.
+  </div>
+  <div class="table" style="font-size: 12px;">
+    <table>
+      <tr>
+        <th>SUBJECT CODE</th>
+        <th class="subject">SUBJECT NAME</th>
+        <th>CREDIT HOUR</th>
+        <th>GRADE POINT</th>
+        <th>GRADE</th>
+        <th>FINAL GRADE</th>
+        <th>REMARKS</th>
+      </tr>
+      <ng-container *ngFor="let item of marksheet">
+        <tr>
+          <td [attr.rowspan]="item.subjects.length">{{ item.subject_code }}</td>
+          <td class="subject">{{ item.subjects[0].name }}</td>
+          <td>{{ item.subjects[0].creditHour }}</td>
+          <td>{{ item.subjects[0].gradePoint }}</td>
+          <td>{{ item.subjects[0].grade }}</td>
+          <td [attr.rowspan]="item.subjects.length">{{ item.finalGrade }}</td>
+          <td [attr.rowspan]="item.subjects.length">{{ item.remarks }}</td>
+        </tr>
+        <tr *ngFor="let sub of item.subjects.slice(1)">
+          <td class="subject">{{ sub.name }}</td>
+          <td>{{ sub.creditHour }}</td>
+          <td>{{ sub.gradePoint }}</td>
+          <td>{{ sub.grade }}</td>
+        </tr>
+      </ng-container>
+      <tr>
+        <td colspan="7" class="gpa" style="font-size: 16px;font-weight: bold;">GRADE POINT AVERAGE [GPA]: {{ student.gpa }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="below_table" style="font-size: 12px;">
+    <div>
+      <table>
+        <tr><td>Remarks</td></tr>
+        <tr><td style="width: 200px; height: 100px; border: 1px solid black;"></td></tr>
+      </table>
+      <p>Prepared by: {{school.preparedBy}}</p>
+    </div>
+
+    <div style="font-size: 12px;" class="result">
+      <b>Result:..........</b>
+      <br>
+      Total Working Days: <b>{{school.workingDays}}</b> Days<br>
+      Total School Days: <b>{{school.schoolDays}}</b> Days<br>
+      Total Present Days: <b>{{school.presentDays}}</b> Days<br>
+    </div>
+  </div>
+  <div class="sign" style="font-size: 12px;">
+    <div class="checked_by">
+      <div>...........................................</div>
+      <div>{{school.checkedBy}}</div>
+      <div>Checked By</div>
+    </div>
+    <div class="principle" >
+      <div>............................................</div>
+      <div>{{school.headTeacher}}</div>
+      <div>HEAD TEACHER</div>
+      <div>Date of Issue: {{school.issueDate}} B.S.</div>
+    </div>
+  </div>
+  <div style="font-size: 12px;">
+    <div class="full">INTERNAL (IN): PARTICIPATION, PRACTICAL/PROJECT WORKS, COMMUNITY WORKS, INTERNSHIP, PRESENTATIONS, TERMINAL EXAMINATIONS.</div>
+    <div class="full">THEORY (TH): WRITTEN EXTERNAL EXAMINATION.</div>
+    <div class="last">
+      <div>
+        Abs = Absent
+      </div>
+      <div>
+        W = Withheld
+      </div>
+    </div>
+  </div>
+</div>

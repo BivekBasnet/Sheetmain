@@ -1,1 +1,249 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
+
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #F2EEEE;
+  font-family: 'Roboto', sans-serif;
+  font-optical-sizing: auto;
+}
+
+
+.text-primary{
+  color:#506EE4;
+}
+.text-btn-primary{
+  color:#202C4B !important;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  overflow: hidden;
+  font-weight: 500;
+  border:none;
+  background: transparent;
+
+}
+
+.btn{
+  &.btn-form{
+    margin-bottom: 5px;
+  }
+  border-radius: 5px;
+    padding: 0.5rem 0.85rem;
+    font-size: 14px;
+    transition: all 0.5s;
+    font-weight: 500;
+    outline: transparent;
+
+    &.btn-sm{
+      padding: .25rem .5rem;
+      font-size: .9rem;
+      border-radius: .2rem;
+      font-weight: 400;
+    }
+
+  &.btn-primary{
+    background-color: #506EE4;
+    border: 1px solid #506EE4;
+    color: #FFF;
+    &:hover, &:focus, &:active, &:focus-within{
+      background-color: #3154df;
+      border: 1px solid #3154df;
+      color: #FFF;
+    }
+  }
+
+  &.btn-danger{
+    background-color: #E82646;
+    border: 1px solid #E82646;
+    color: #FFF;
+    &:hover, &:focus, &:active, &:focus-within{
+      background-color: #3154df;
+      border: 1px solid #3154df;
+      color: #FFF;
+    }
+  }
+}
+
+.form-label{
+  font-size: 14px;
+  font-weight: 500;
+  color: #202C4B;
+}
+
+.add-card{
+  margin-bottom: 1.5rem;
+  background-color: #FFF;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #E9EDF4;
+  box-shadow: 0px 4.4px 12px -1px rgba(222, 222, 222, 0.3607843137);
+  .add-card-header{
+    position: relative;
+    background: #E9EDF4;
+    padding: 1rem 1.25rem 1rem;
+    color:#202C4B !important;
+    h4{
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 0px;
+    }
+
+  }
+}
+
+.b-1{
+  border: 1px solid #E9EDF4;
+}
+
+.list-card{
+  margin-bottom: 1.5rem;
+  background-color: #FFF;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #E9EDF4;
+  box-shadow: 0px 4.4px 12px -1px rgba(222, 222, 222, 0.3607843137);
+  color: inherit;
+  .list-card-header{
+    border-color: #E9EDF4;
+    position: relative;
+    background: transparent;
+    padding: 1rem 1.25rem 1rem;
+    border-bottom: 1px solid #E9EDF4;
+  }
+  .list-card-filter{
+    border-color: #E9EDF4;
+    position: relative;
+    background: transparent;
+    padding: 1rem 1.25rem 1rem;
+    border-bottom: 1px solid #E9EDF4;
+  }
+  .table{
+    margin: 0px;
+    thead{
+      tr{
+        border-color: #E9EDF4;
+        th{
+          color: #202C4B;
+          font-size: 14px;
+          font-weight: 500;
+          padding: 12px 20px;
+          background-color: #F2F4F8;
+        }
+      }
+    }
+    tbody{
+      tr{
+        td{
+          color: #515B73;
+          border-bottom: 1px solid #E9EDF4;
+          padding: 12px 20px;
+          font-size: 14px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+
+.form-control {
+  border-color: #E9EDF4;
+  color: #202C4B;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  border-radius: 5px;
+  padding: 0.5rem 0.625rem;
+  height: 38px;
+  transition: all 0.5s;
+  margin-bottom: 5px;
+  .no-radius{
+    border-radius: 0;
+  }
+
+}
+
+.row{
+  &.no-gap{
+    margin-left: -5px;
+    margin-right: -5px;
+    &>*{
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+  &.no-radius{
+    .form-control{
+      border-radius: 0;
+    }
+  }
+}
+.round-button{
+  width: 2.313rem;
+  height: 2.313rem;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  border: 1px solid #E9EDF4 !important;
+  color: #515B73 !important;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all 0.3s;
+  .icon{
+
+  }
+  .text{
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    display: none;
+    overflow: hidden;
+    font-weight: 500;
+  }
+  &:hover{
+    padding-right: 12px;
+    padding-left: 12px;
+    background: #E9EDF4;
+    width: auto;
+    border-radius: 0.5rem;
+    .icon{
+      margin-right: 5px;
+    }
+    .text{
+      display: inline;
+
+    }
+  }
+}
+
+.shadow-bottom{
+  box-shadow: 0px 4.4px 12px -1px rgba(222, 222, 222, 0.3607843137);
+}
+
+.mini-card{
+  margin-bottom: 1.5rem;
+  background-color: #FFF;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #E9EDF4;
+  box-shadow: 0px 4.4px 12px -1px rgba(222, 222, 222, 0.3607843137);
+  color: inherit;
+  .mini-card-header{
+    border-bottom: 1px solid  #E9EDF4;
+    position: relative;
+    background: transparent;
+    padding: 1rem 1.25rem 1rem;
+    h4{
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 0px;
+    }
+  }
+  .mini-card-body{
+  }
+}

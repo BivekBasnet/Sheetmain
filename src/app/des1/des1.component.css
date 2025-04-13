@@ -1,0 +1,48 @@
+.out{
+  border: 6px double black;
+  padding: 6px;
+}
+.name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo, .content, .full{
+  display: flex;
+  justify-content:center;
+}
+
+.gpa{
+  text-align: center;
+}
+
+table, td, th{
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.below_table{
+  display: flex;
+  justify-content:flex-start
+}
+
+.sign, .last{
+  display: flex;
+  justify-content:space-around
+}
+
+.subject{
+  white-space: normal;
+  word-wrap: break-word;
+  width: 50%;
+}
+
+.remarks{
+  border: none;
+}
+
+.result{
+  padding: 4px;
+}
